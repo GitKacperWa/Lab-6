@@ -73,7 +73,6 @@ class Main {
     public static void exercise1() throws IOException, WrongStudentName, WrongAge {
         var name = ReadName();
         System.out.println("Podaj wiek: ");
-        //var age = ReadAge();
         boolean wrongAge = false;
         int age = 0;
         while (!wrongAge) {
