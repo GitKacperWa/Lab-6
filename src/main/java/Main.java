@@ -65,7 +65,12 @@ class Main {
         System.out.println("0 - aby wyjść z programu");
         while (true) {
             try {
-                return scan.nextInt();
+                int choice = scan.nextInt();
+                if (choice < 0 || choice > 3) {
+                    System.out.println("Błędny wybór! Wpisz liczbę z zakresu 0-3.");
+                    continue;
+                }
+                return choice;
             } catch (InputMismatchException e) {
                 System.out.println("Błędny wybór! Wpisz liczbę.");
                 scan.nextLine();
